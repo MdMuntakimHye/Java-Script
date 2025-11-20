@@ -36,8 +36,37 @@ void explainVector(){
     for(auto& p: v2){
         cout << p << " ";
     }
+    vec.push_back({5,6});
+    vec.emplace_back(7,8);
 
+    for(auto& p : vec){
+        cout << "(" << p.first << "," << p.second <<")"<< endl;
+    }
+
+    cout << endl;
+
+    for(auto k:vec){
+        cout << "(" << k.first << "," << k.second <<")"<< endl;
+ 
+    }
+    cout << endl;
+    vector<int> v3 = {10, 20, 30, 40, 50};
+
+    //vector size
+
+    cout << v3.size() << endl;
+    if(v3.size() > 0) cout << "vector is not empty" << endl;
+    //begin
+    cout << *v3.begin() << endl;
+    //end
+    cout << *(v3.end()-1) << endl; 
+    cout <<  *(v3.end()) << endl;
     
+    //printing the vector
+
+    for(auto it = v3.begin(); it != v3.end(); it++){
+        cout << *it << " ";
+    }
 }
 
 int main(){
