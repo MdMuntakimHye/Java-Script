@@ -35,7 +35,7 @@ void explainVector(){
     //v2
     for(auto& p: v2){
         cout << p << " ";
-    }
+    } 
     vec.push_back({5,6});
     vec.emplace_back(7,8);
 
@@ -67,6 +67,50 @@ void explainVector(){
     for(auto it = v3.begin(); it != v3.end(); it++){
         cout << *it << " ";
     }
+    // for erase 
+    vector<int> v4 = { 15,25,35,45,55 };
+    //v4.erase(v4.begin()+1);
+    cout << "v4" << endl;
+
+    //v4.erase(v4.end()-2);
+
+    v4.erase(v4.begin(),v4.end() );
+
+    for(auto it:v4){
+        cout  << it << " ";
+    }
+
+    cout << endl;
+
+    vector<int> v5 = { 15,25,35,45,55 };
+    v5.insert(v5.begin()+1,2,300);
+
+    for(auto it:v5){
+        cout  << it << " ";
+    }
+    cout << endl;
+    vector<int> copy(3,10);
+    v5.insert(v5.begin(),copy.begin(),copy.end());
+    for(auto it:v5){
+        cout << it << " ";
+    }
+    
+    cout << "the size of the vector is " << v5.size() << endl;
+
+    vector<int> v6 = {10,20};
+    vector<int> v7 = {30,40};
+
+    v6.swap(v7);
+    cout << endl << "v7 is " ;
+    for(auto x:v7){
+        cout << x << " ";
+    } 
+
+    v7.clear(); //clears the vector
+    v6.pop_back(); // pops back the last element
+    v7.empty(); // shows false if it's not empty. true if it's empty
+
+
 }
 
 int main(){
