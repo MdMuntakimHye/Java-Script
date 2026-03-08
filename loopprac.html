@@ -36,6 +36,7 @@
 </head>
 <body>
     <section></section>
+    <input type="text" id="textBox">
     <script>
         // const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
         // const list = document.createElement("ul");
@@ -88,7 +89,8 @@
         if(!found){
                 para.textContent = "Name was not found"
             }
-        
+        const textBox = document.querySelector("#textBox");
+        textBox.addEventListener("keydown",even => {console.log(`you pressed ${event.key}`);});
     </script>
 </body>
 </html>
