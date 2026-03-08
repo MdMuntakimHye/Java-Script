@@ -9,15 +9,18 @@ const people = [
   "Kay",
   "Bruce",
 ];
-const admitted = "Admitted: ";
-const refused = "Refused: ";
+// let admitted = "Admitted: ";
+// let refused = "Refused: ";
 
-for(const person of people){
-    if(person === "Phil" || person === "Lora"){
-        refused = refused + `${person}`;
-    } else {
-        admitted = admitted + `${person}`;
-    }
-}
-console.log(admitted);
-console.log(refused);
+// for(const person of people){
+//     if(person === "Phil" || person === "Lola"){
+//         refused = refused + `${person}, `;
+//     } else {
+//         admitted = admitted + `${person}, `;
+//     }
+// }
+
+const admitted = people.filter(p => p==="Phil" || p=== "Lola");
+const refused = people.filter(p => p !== "Phil" && p !== "Lola");
+console.log(admitted.join(","));
+console.log(refused.join(","));
