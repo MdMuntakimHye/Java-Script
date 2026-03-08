@@ -4,19 +4,22 @@ for (const bird of birds) {
   console.log(bird);
 }
 
-function double(number) {
-   return number * 2;
-}
+// function double(number) {
+//    return number * 2;
+// }
+// const numbers = [5, 2, 7, 6];
+// const doubled = numbers.map(double);
+// console.log(doubled);
 const numbers = [5, 2, 7, 6];
-const doubled = numbers.map(double);
-console.log(doubled);
+const doubled = numbers.map((number) => {return number *2});
+console.log(`the doubled numbers are ${doubled}`);
 
-function uppercase(city) {
-    return city.toUpperCase();
-}
+// function uppercase(city) {
+//     return city.toUpperCase();
+// }
 const cities = ["London", "Liverpool", "Totnes", "Edinburgh"];
-const upcase = cities.map(uppercase);
-console.log(upcase);
+const upcase = cities.map((city) => {return city.toUpperCase()});
+console.log(`converted uppercase cities are ${upcase}`);
 
 
 //you'll want to create a new array containing only the items in the original array that match some test. You can do that using filter()
@@ -26,12 +29,12 @@ console.log(upcase);
 
 //Use filter() → “I want to keep only some items”
 
-function isLong(city) {
-    return city.length > 8;
-}
+// function isLong(city) {
+//     return city.length > 8;
+// }
 const cities2 = ["London", "Liverpool", "Totnes", "Edinburgh"];
-const longer = cities2.filter(isLong);
-console.log(longer);
+const longer = cities2.filter((city) => {return city.length > 8});
+console.log(`Cities with more than 8 letters are ${longer}`);
 
 //string to array
 const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
